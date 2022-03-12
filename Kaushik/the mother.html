@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <style>
+.checked {
+  color: orange;
+}
+</style>
+  <style>
+    .wrapper{
+      display: flex;
+    }
+    .side{
+      flex: 1;
+      /* background-color: rgb(160, 194, 160); */
+      height: 600px;
+    }
+    .main{
+      flex: 4;
+      height: 600px;
+      background-color: rgb(217, 243, 243);
+      overflow: auto;
+    }
+    .pic{
+      height: 600px;
+      width: 450px;
+    }
+    /* star hover */
+    .rating-list li {
+      float: right;
+      color: rgb(12, 1, 1);
+      padding: 10px 5px;
+    }
+
+    .rating-list li:hover,
+    .rating-list li:hover ~ li {
+      color: red;
+    }
+
+    .rating-list {
+      display: inline-block;
+      list-style: none;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="side">
+      <img class="pic" src="./images/fiction1.jpg">
+    </div>
+    <div class="main">
+      <center><h1 id="name">The Mother</h1></center>
+      <center><h2>BY</h2></center>
+      <center><h1 id="writer">Maxim Gorky</h1></center>
+      <center>
+      <p>INTRODUCTION</p>
+      <p>
+        In his novel, Gorky portrays the life of a woman who works in a Russian factory doing hard manual labour and combating poverty and hunger, among other hardships. Pelageya Nilovna Vlasova is the real protagonist; her husband, a heavy drunkard, physically assaults her and leaves all the responsibility for raising their son, Pavel Vlasov, to her, but unexpectedly dies. Pavel noticeably begins to emulate his father in his drunkenness and stammer, but suddenly becomes involved in revolutionary activities. Abandoning drinking, Pavel starts to bring books to his home. Being illiterate and having no political interest, Nilovna is at first cautious about Pavel's new activities. However, she wants to help him. Pavel is shown as the main revolutionary character. Nevertheless Nilovna, moved by her maternal feelings and, though uneducated, overcoming her political ignorance to become involved in revolution, is considered the true protagonist of the novel.
+        The Bolsheviks praised the novel as a paean to socialist ideals, but its message encompasses more than mere class struggle. It is full of Biblical allusions: the revolutionaries are portrayed as saints, ready for martyrdom; Pavel speaks with 'the ardour of a disciple'; the Gospels are quoted to convey ideas about truth-searching. 'They’ve deceived us with God too!' says one of the characters before leaving the factory to go around villages, determined to open people’s eyes to the way they are being exploited: by the priests, the authorities, the 'gentlefolk'. 'People won't believe the naked word — suffering's needed, the word has to be washed in blood,' he warns, his words sounding especially ominous now, after a century of revolutions. The book's central theme is the mother's awakening from a life of fear and ignorance.....
+      </center>
+        <center>
+        <div id="error"></div>
+        <form  name="myForm" onsubmit="validateForm()" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Your name">
+          </div>
+          <br>
+          <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Your email address">
+          </div>
+          <br>
+          <div><label>Give Your Rating:</label></div>
+          <div>
+          <ul class="list-inline rating-list">
+            <li><i class="fa fa-star" title="Rate 5"></i></li>
+            <li><i class="fa fa-star" title="Rate 4"></i></li>
+            <li><i class="fa fa-star" title="Rate 3"></i></li>
+            <li><i class="fa fa-star" title="Rate 2"></i></li>
+            <li><i class="fa fa-star" title="Rate 1"></i></li>
+          </ul>
+          </div>
+          <br>
+          <div><label>Remarks:</label></div>
+          
+
+          <textarea class="form-control" id="exampleInputPassword1" placeholder="Your message" name="" id="" cols="30" rows="10"></textarea>
+          <br>
+          <button class="btn" style="background-color: #FBD062; border: none; color: black;font-weight: 600 " type="submit">Send</button>
+        
+      </form>
+      </center>
+    </div>
+  </div>
+  <script>
+function validateForm() {
+    let x = document.forms["myForm"]["name"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+    x = document.forms["myForm"]["email"].value;
+    if (x == "") {
+        alert("email must be filled out");
+        return false;
+    }
+}
+  </script>
+</body>
+</html>

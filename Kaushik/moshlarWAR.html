@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <style>
+.checked {
+  color: orange;
+}
+</style>
+  <style>
+    .wrapper{
+      display: flex;
+    }
+    .side{
+      flex: 1;
+      /* background-color: rgb(160, 194, 160); */
+      height: 600px;
+    }
+    .main{
+      flex: 4;
+      height: 600px;
+      background-color: rgb(217, 243, 243);
+      overflow: auto;
+    }
+    .pic{
+      height: 600px;
+      width: 450px;
+    }
+    /* star hover */
+    .rating-list li {
+      float: right;
+      color: rgb(12, 1, 1);
+      padding: 10px 5px;
+    }
+
+    .rating-list li:hover,
+    .rating-list li:hover ~ li {
+      color: red;
+    }
+
+    .rating-list {
+      display: inline-block;
+      list-style: none;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="side">
+      <img class="pic" src="./images/nf2.jpg">
+    </div>
+    <div class="main">
+      <center><h1 id="name">মসলার যুদ্ধ</h1></center>
+      <center><h2>BY</h2></center>
+      <center><h1 id="writer"> Satyen Sen</h1></center>
+      <center>
+      <p>ভূমিকাঃ</p>
+      <p>মধ্যযুগের পৃথিবীর বিভিন্ন পরাশক্তির চোখ ছিল ভারতবর্ষের মসলার দিকে। সত্যেন সেনের মসলার যুদ্ধ সেইসব দিনের কথা। সহজিয়া ভাষায় শক্তিশালী ইতিহাসের গল্প।<br>
+        ইন্দোনেশিয়ার দ্বীপ এবং নগরের আদিবাসীদের প্রতি তাদের অন্যায্য, বর্বর আচরণ; - তৎকালীন মুসলিম শাসকদের দূরদর্শিতার অভাব; - প্রাচীন ভারতবর্ষের সাথে ইন্দোনেশিয়ার সম্পর্ক; উপরে বলার ধরণ দেখে হয়ত বোরিং মনে হতে পারে, কিন্তু সত্যেন সেন রচিত ছোট্ট বই "মসলার যুদ্ধ" আসলেই ভারতবর্ষের ইতিহাস নিয়ে লিখা একটি মাস্টারপিস!মধ্যযুগের পৃথিবীর বিভিন্ন পরাশক্তির চোখ ছিল ভারতবর্ষের মসলার দিকে। সত্যেন সেনের মসলার যুদ্ধ সেইসব দিনের কথা। সহজিয়া ভাষায় শক্তিশালী ইতিহাসের গল্প।
+
+      </center>
+        <center>
+        <div id="error"></div>
+        <form  name="myForm" onsubmit="validateForm()" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Your name">
+          </div>
+          <br>
+          <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Your email address">
+          </div>
+          <br>
+          <div><label>Give Your Rating:</label></div>
+          <div>
+          <ul class="list-inline rating-list">
+            <li><i class="fa fa-star" title="Rate 5"></i></li>
+            <li><i class="fa fa-star" title="Rate 4"></i></li>
+            <li><i class="fa fa-star" title="Rate 3"></i></li>
+            <li><i class="fa fa-star" title="Rate 2"></i></li>
+            <li><i class="fa fa-star" title="Rate 1"></i></li>
+          </ul>
+          </div>
+          <br>
+          <div><label>Remarks:</label></div>
+          
+
+          <textarea class="form-control" id="exampleInputPassword1" placeholder="Your message" name="" id="" cols="30" rows="10"></textarea>
+          <br>
+          <button class="btn" style="background-color: #FBD062; border: none; color: black;font-weight: 600 " type="submit">Send</button>
+        
+      </form>
+      </center>
+    </div>
+  </div>
+  <script>
+function validateForm() {
+    let x = document.forms["myForm"]["name"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+    x = document.forms["myForm"]["email"].value;
+    if (x == "") {
+        alert("email must be filled out");
+        return false;
+    }
+}
+  </script>
+</body>
+</html>

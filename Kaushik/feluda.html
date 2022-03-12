@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <style>
+.checked {
+  color: orange;
+}
+</style>
+  <style>
+    .wrapper{
+      display: flex;
+    }
+    .side{
+      flex: 1;
+      /* background-color: rgb(160, 194, 160); */
+      height: 600px;
+    }
+    .main{
+      flex: 4;
+      height: 600px;
+      background-color: rgb(217, 243, 243);
+      overflow: auto;
+    }
+    .pic{
+      height: 600px;
+      width: 450px;
+    }
+    /* star hover */
+    .rating-list li {
+      float: right;
+      color: rgb(12, 1, 1);
+      padding: 10px 5px;
+    }
+
+    .rating-list li:hover,
+    .rating-list li:hover ~ li {
+      color: red;
+    }
+
+    .rating-list {
+      display: inline-block;
+      list-style: none;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="side">
+      <img class="pic" src="./images/fiction.jpg">
+    </div>
+    <div class="main">
+      <center><h1 id="name">ফেলুদা সমগ্র</h1></center>
+      <center><h2>BY</h2></center>
+      <center><h1 id="writer">Satyajit Ray</h1></center>
+      <center>
+      <p>ভূমিকাঃ</p>
+      <p>ফেলুদার গল্পে তার চরিত্রকে আঁকা হয়েছে প্রায় ২৭ বছর বয়সী একজন যুবক হিসেবে, যার উচ্চতা ৬'২''। ফেলুদা মার্শাল আর্টে বিশেষ দক্ষ। যদিও অসম্ভব ভালো বিশ্লেষণ ও পর্যবেক্ষনের ক্ষমতার ওপরেই যে কোনও রহস্যের সমাধানে সে আস্থা রাখতে ভালোবাসে। তার এই বিশেষ ক্ষমতাকে সে মজা করে বলে থাকে মগজাস্ত্র। যদিও বাড়তি সতর্কতার জন্য তার নিজস্ব পয়েন্ট থ্রি টু কোল্ট রিভলভার রয়েছে। রিভলভার থেকে গুলি চালাতে ফেলুদাকে খুব কম গল্পেই দেখা যায় । যদিও সাম্প্রতিক ফেলুদার সিনেমাগুলোর প্রায় সবকটায় ফেলুদাকে গুলি চালাতে দেখা গেছে। ফেলুদার রহস্য অনেকসময়েই কলকাতার বাইরেও বিস্তারলাভ করে, এমনকি অনেক সময়ে তা দেশের গন্ডিও ছাড়িয়ে যায়। এমনকি পাড়াগাঁয়েও ফেলুদাকে দেখা গেছে গোয়েন্দাগিরি করতে। রহস্যের বিস্তার যেখানেই ঘটুক না কেন, সেই জায়গা সম্পর্কে বিস্তারিত পড়াশুনো করে যাওয়া ফেলুদার অভ্যাস।<br>
+          মাত্র নয় বছর বয়সে মা বাবা মারা যাওয়ায় ফেলুদা তার বাবার ছোটো ভাইয়ের কাছেই মানুষ হয়েছেন।[৬] ফেলুদার বাবা জয়কৃষ্ণ মিত্র ঢাকা কলেজিয়েট স্কুলে গণিত ও সংস্কৃতের শিক্ষক ছিলেন। ফেলুদা পেশায় গোয়েন্দা হলেও, এটা নেশাও বটে। গোয়েন্দাগিরি শুরুর আগে ফেলুদাও একটি বেসরকারি অফিসে কিছুদিন চাকরি করেছেন। তোপসে তার সহকারী হলেও সম্পর্কে তার কাকাতো ভাই । তার নেশা বলতে সিগারেট। সিগারেটের প্রিয় ব্র্যান্ড চারমিনার। ফেলুদা প্রতিদিন সকালে নিয়মিত শরীরচর্চা ও যোগব্যায়ামে অভ্যস্ত। প্রচুর বই পড়া ও সাম্প্রতিক তথ্য সম্পর্কে অত্যন্ত সজাগ থাকা গোয়েন্দা হিসেবে পেশাগত দিক দিয়েও তাকে অনেক এগিয়ে রাখে।
+      </center>
+        <center>
+        <div id="error"></div>
+        <form  name="myForm" onsubmit="validateForm()" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Your name">
+          </div>
+          <br>
+          <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Your email address">
+          </div>
+          <br>
+          <div><label>Give Your Rating:</label></div>
+          <div>
+          <ul class="list-inline rating-list">
+            <li><i class="fa fa-star" title="Rate 5"></i></li>
+            <li><i class="fa fa-star" title="Rate 4"></i></li>
+            <li><i class="fa fa-star" title="Rate 3"></i></li>
+            <li><i class="fa fa-star" title="Rate 2"></i></li>
+            <li><i class="fa fa-star" title="Rate 1"></i></li>
+          </ul>
+          </div>
+          <br>
+          <div><label>Remarks:</label></div>
+          
+
+          <textarea class="form-control" id="exampleInputPassword1" placeholder="Your message" name="" id="" cols="30" rows="10"></textarea>
+          <br>
+          <button class="btn" style="background-color: #FBD062; border: none; color: black;font-weight: 600 " type="submit">Send</button>
+        
+      </form>
+      </center>
+    </div>
+  </div>
+  <script>
+function validateForm() {
+    let x = document.forms["myForm"]["name"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+    x = document.forms["myForm"]["email"].value;
+    if (x == "") {
+        alert("email must be filled out");
+        return false;
+    }
+}
+  </script>
+</body>
+</html>
