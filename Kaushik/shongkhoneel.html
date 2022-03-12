@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <style>
+.checked {
+  color: orange;
+}
+</style>
+  <style>
+    .wrapper{
+      display: flex;
+    }
+    .side{
+      flex: 1;
+      /* background-color: rgb(160, 194, 160); */
+      height: 600px;
+    }
+    .main{
+      flex: 4;
+      height: 600px;
+      background-color: rgb(217, 243, 243);
+      overflow: auto;
+    }
+    .pic{
+      height: 600px;
+      width: 450px;
+    }
+    /* star hover */
+    .rating-list li {
+      float: right;
+      color: rgb(12, 1, 1);
+      padding: 10px 5px;
+    }
+
+    .rating-list li:hover,
+    .rating-list li:hover ~ li {
+      color: red;
+    }
+
+    .rating-list {
+      display: inline-block;
+      list-style: none;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="side">
+      <img class="pic" src="./images/fiction5.jpg">
+    </div>
+    <div class="main">
+      <center><h1 id="name">শঙ্খনীল কারাগার</center>
+      <center><h2>BY</h2></center>
+      <center><h1 id="writer">		হুমায়ূন আহমেদ</h1></center>
+      <center>
+      <p>ভূমিকাঃ</p>
+      <p>উপন্যাসের কথক ‘খোকা’। তারা ছয় ভাইবোন। তার বড় বোন রাবেয়া। তার বাবা আর রাবেয়ার বাবা ভিন্ন দুই ব্যক্তি। রাবেয়ার মায়ের আগে এক ধনীর সাথে বিয়ে হয়েছিল। সেই পরিবারে জন্মায় রাবেয়া। রাবেয়ার বাবার সাথে রাবেয়ার মায়ের ছাড়াছাড়ি হয়ে যায়।
+রাবেয়ার মায়ের বাবার বাড়ি অভিজাত শ্রেণীর। রাবেয়ার মায়ের জীবন, রূপলাবণ্য সবই ছিল বড়লোকি। তিনি ভালো গান করতে জানতেন। তার বাবার বাড়ি আশ্রয় নেন গরীব শিক্ষার্থী আজহার হোসেন। একদিন তিনি রাবেয়ার মায়ের মুখে গান শুনে তার প্রেমে পড়ে যান। তার কয়েকমাস বাদে রাবেয়ার মায়ের সাথে বিয়ে হয় তার। রাবেয়ার মা তার বাবার বাড়ির সবকিছু ছেড়ে আজহার সাহেবের সংসারে যান।
+        দীর্ঘ ২৩বছরের সংসারে একে একে খোকা ও তার বাকি চার ভাইবোন জন্মায়। সবচেয়ে ছোট মেয়ে নিনুর জন্মের সময় মারা যান খোকার মা। খোকার মা যেহেতু জন্মগত অভিজাত শ্রেণীর এবং খোকার বাবা যেহেতু দরিদ্র ঘরের ছেলে সেহেতু খোকার মায়ের সাথে তার অন্তরঙ্গ হতো না। তবুও তিনি পছন্দ এবং সম্মান করতেন তার স্ত্রীকে। কিন্তু তার স্ত্রী থাকতেন চুপচাপ, গম্ভীর। রাবেয়া ছাড়া তার অন্যান্য সন্তানরাও তার স্নেহ পায়নি তেমন। তার মনে খুব দুঃখ থাকতো লুকিয়ে। সেজন্যই গানপাগলী হয়েও তিনি সংসারে ২৩ বছরের জীবনে আর কখনও গান করেন নি।
+        
+        খোকা তার ছোটখালার মেয়ে কিটকিকে ভালোবাসতো। কিটকিও খোকাকে ভালোবাসতো। কিন্তু তারা সপরিবারে পাঁচবছরের জন্য ম্যানিলায় যায়। সেখান থেকে একসময় ফিরে আসে, কিন্তু তার সাথে খোকার বিয়ে হয় না।
+        
+        খোকার ছোটবোন রুনু বিয়ের আসরে বসলেও তার বিয়া হয় না মনের মানুষের সাথে। সে দুঃখে মানসিক ভারসাম্য হারিয়ে অসুস্থ হয়ে মারা যায়। রাবেয়ারও বিয়ে হয় না। কারণ তার গায়ের রং কালো।
+      </center>
+        <center>
+        <div id="error"></div>
+        <form  name="myForm" onsubmit="validateForm()" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Your name">
+          </div>
+          <br>
+          <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Your email address">
+          </div>
+          <br>
+          <div><label>Give Your Rating:</label></div>
+          <div>
+          <ul class="list-inline rating-list">
+            <li><i class="fa fa-star" title="Rate 5"></i></li>
+            <li><i class="fa fa-star" title="Rate 4"></i></li>
+            <li><i class="fa fa-star" title="Rate 3"></i></li>
+            <li><i class="fa fa-star" title="Rate 2"></i></li>
+            <li><i class="fa fa-star" title="Rate 1"></i></li>
+          </ul>
+          </div>
+          <br>
+          <div><label>Remarks:</label></div>
+          
+
+          <textarea class="form-control" id="exampleInputPassword1" placeholder="Your message" name="" id="" cols="30" rows="10"></textarea>
+          <br>
+          <button class="btn" style="background-color: #FBD062; border: none; color: black;font-weight: 600 " type="submit">Send</button>
+        
+      </form>
+      </center>
+    </div>
+  </div>
+  <script>
+function validateForm() {
+    let x = document.forms["myForm"]["name"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+    x = document.forms["myForm"]["email"].value;
+    if (x == "") {
+        alert("email must be filled out");
+        return false;
+    }
+}
+  </script>
+</body>
+</html>
