@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web technologies Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/proj css/reviewstyle.css">
+
+</head>
+
+<body>
+  <section id="booklayout">
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <img src="/image/p6.jpg" alt="image" style="max-width: 100%"   />
+          
+        </div>
+
+        <div class="col-8">
+          <h2 id="bookTitle" style="max-width: 100%" >সংশপ্তক</h2>
+          <h5> by  শহীদুল্লা কায়সার</h5> 
+        
+        <div id="description" class="readable stacked"style="max-width: 100%" > 
+      
+          <p>সংশপ্তক বিগত যুগের কাহিনী। সংশপ্তক এ যুগের দর্পণ। সংশপ্তক ভাবীযুগের কল্লোল। সংঘাতে, বেদনায় ক্ষুব্ধ যে কাল​—​সে কালের মানুষ দরবেশ, ফেলু মিয়া, জাহেদ, সেকান্দার মাস্টার, রামদয়াল, অশোক, রমজান আর মোজাদ্দেদী সাহেব। জীবনসংগ্রামে যারা আজও হাল ছাড়েনি তাদেরই প্রতিভূ লেকু-কসির-হুরমতি। আর যারা ধরা পড়েছে যুগের দর্পণে, হার মেনেছে জীবনমৃত্যুর সন্ধিক্ষণে, সেই রাবু, আরিফা, রানু, রিহানা কিংবা মালু​—​এরা সবাই মুখর ক্রান্তিলগ্নের উত্থান-পতনে। যুগধারার ত্রিবেণী সঙ্গমে এই নায়ক-নায়িকারা কেউ অসাধারণতার দাবিদার নয়। কিন্তু এরা সবাই অনন্যসাধারণ। এরা ইতিহাস।</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="col-6">
+    <form method="post" id="contactForm">
+      <div class="mt-3">
+        <label for="firstname">First name</label>
+
+        <input type="text" id="firstname" name="firstname">
+      </div>
+
+      <div class="mt-3">
+        <label for="lastname">Last name</label>
+
+        <input type="text" id="lastname" name="lastname">
+      </div>
+
+      <div class="mt-3">
+        <label for="Review">Review</label>
+
+        <textarea id="Review" name="Review"></textarea>
+      </div>
+      <div class="mt-3">
+
+      <label>Give Your Rating:</label>
+
+    <select name="rate" id="rate">
+    <option value="one">1</option>
+    <option value="two">2</option>
+    <option value="three">3</option>
+    <option value="four">4</option>
+    <option value="five">5</option>
+    </select>
+    <br><br>
+</div>
+
+    <div class="mt-3">
+        <button type="submit">submit</button>
+      </div>
+    </form>
+  </div>
+ 
+</body>
+
+</html>
