@@ -46,28 +46,52 @@
         এরপর শুন্ডীর রাজকন্যা মণিমালার সঙ্গে গুপীর ও হাল্লার রাজকন্যা মুক্তামালার সঙ্গে বাঘার বিয়ে হয়।মূলত ছোটদের জন্য নির্মিত হলেও গুপী গাইন বাঘা বাইন সব বয়সের দর্শকদেরই উপভোগ্য। ছবির মূল আকর্ষণ সত্যজিৎ রচিত গানগুলি, সাড়ে ৬ মিনিটের ভূতের নৃত্যের একটি দৃশ্য ও ভারতীয় স্টাইলে নির্মিত বিশেষ কয়েকটি স্পেশাল এফেক্ট। মুক্তির ছয় মাসের মধ্যে ছবিটি সারা বাংলায় শুধু জনপ্রিয়তাই অর্জন করে না, বাংলার জনপ্রিয় সংস্কৃতির একটি স্থায়ী আইকনে পরিণত হয়।</p>
       </center>
         <center>
-        <form action="">
-          <label for="">Enter Name</label><input type="text" name="name" id="name" required><br><br>
-          <label for="">Enter Email</label><input type="email" name="email" id="email" required><br><br>
-          <label>Give Your Rating:</label>
-          <select name="rating" id="rate">
-          <option value="rating">1</option>
-          <option value="rating">2</option>
-          <option value="rating">3</option>
-          <option value="rating">4</option>
-          <option value="rating">5</option>
-          <option value="rating">6</option>
-          <option value="rating">7</option>
-          <option value="rating">8</option>
-          <option value="rating">9</option>
-          <option value="rating">10</option>
-          </select>
-          <br><br>
-          <label for="">Your Comment</label><textarea name="comment" id="" cols="30" rows="10"></textarea><br><br>
-          <input type="submit" value="Submit">
-        </form>
+        <div id="error"></div>
+        <form  name="myForm" onsubmit="validateForm()" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Your name">
+          </div>
+          <br>
+          <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Your email address">
+          </div>
+          <br>
+          <label for="rating">Give Your Rating</label>
+          <select name="rating" id="rating">
+            <option value="rating">1</option>
+            <option value="rating">2</option>
+            <option value="rating">3</option>
+            <option value="rating">4</option>
+            <option value="rating">5</option>
+            <option value="rating">6</option>
+            <option value="rating">7</option>
+            <option value="rating">8</option>
+            <option value="rating">9</option>
+            <option value="rating">10</option>
+          </select><br><br>
+          <div class="form-group">
+              <textarea class="form-control" id="exampleInputPassword1" placeholder="Your message" name="" id="" cols="30" rows="10"></textarea>
+          </div>
+          <br>
+          <button class="btn" style="background-color: #FBD062; border: none; color: black;font-weight: 600 " type="submit">Send</button>
+        
+      </form>
       </center>
     </div>
   </div>
+  <script>
+function validateForm() {
+    let x = document.forms["myForm"]["name"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+    x = document.forms["myForm"]["email"].value;
+    if (x == "") {
+        alert("email must be filled out");
+        return false;
+    }
+}
+  </script>
 </body>
 </html>
