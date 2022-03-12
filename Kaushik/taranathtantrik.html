@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <style>
+.checked {
+  color: orange;
+}
+</style>
+  <style>
+    .wrapper{
+      display: flex;
+    }
+    .side{
+      flex: 1;
+      /* background-color: rgb(160, 194, 160); */
+      height: 600px;
+    }
+    .main{
+      flex: 4;
+      height: 600px;
+      background-color: rgb(217, 243, 243);
+      overflow: auto;
+    }
+    .pic{
+      height: 600px;
+      width: 450px;
+    }
+    /* star hover */
+    .rating-list li {
+      float: right;
+      color: rgb(12, 1, 1);
+      padding: 10px 5px;
+    }
+
+    .rating-list li:hover,
+    .rating-list li:hover ~ li {
+      color: red;
+    }
+
+    .rating-list {
+      display: inline-block;
+      list-style: none;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="side">
+      <img class="pic" src="./images/nf4.jpg">
+    </div>
+    <div class="main">
+      <center><h1 id="name">তারানাথ তান্ত্রিক</center>
+      <center><h2>BY</h2></center>
+      <center><h1 id="writer">	বিভূতিভূষণ বন্দ্যোপাধ্যায়,তারাদাস বন্দ্যোপাধ্যায়</h1></center>
+      <center>
+      <p>ভূমিকাঃ</p>
+      <p>তারানাথ তান্ত্রিক হলেন এক রহস্যময় ব্যক্তিত্ব এবং প্রবক্তা। তাঁর পুরোনাম তারানাথ জ্যোতির্বিনোদ।তাঁর বংশগত পদবি চক্রবর্তী। তাঁর পিতা আদিনাথ।তাঁর জন্মের পূর্বে তাঁর বাড়িতে অমরজীবন নামে এক রহস্যময় ব্যক্তি এসেছিলেন।তিনি ভবিষ্য়‌বাণী করেছিলেন যে তাদের বংশে এক তান্ত্রিকের জন্ম হবে।সে সময় আকাশে নীল রঙের উল্কা দেখা যাবে।[১]
+
+        তিনি মধ্য পঞ্চাশবর্ষী। হাত দেখে আর কোষ্ঠী বানিয়ে দিন গুজরান করেন এই প্রৌঢ়। সংসার তেমন সচ্ছল নয়। অভাব রয়েছে। কিন্তু অভাব কিছুতেই কাবু করতে পারে না মানুষটিকে। স্ত্রী-কন্যা-পুত্র নিয়ে দিব্যি আছেন তারানাথ। জ্যোতিষীর খোলস ছাড়ালে জানা যায়, তিনি একজন সিদ্ধ তান্ত্রিক। কিন্তু কোনও কারণে তার সাধনা অসম্পূর্ণ থেকে যায়। খুব অল্প বয়সে ঘর ছেড়ে ঘুরে বেড়িয়েছেন বাংলার মাঠ-ঘাট-প্রান্তরে।তিনি সমগ্র বাংলায় পরিভ্রমণের সময় অনেক অতিপ্রাকৃত শক্তির সাথে অনেক মুখোমুখি হন।[২] বীরভূমের এক শ্মশানে মাতু পাগলি নামের এক রহস্যময়ী সাধিকার কাছে মহাডামর সাধনা করেন তারানাথ। কিন্তু তাতে সফল হননি। পরে বরাকরের অরণ্যে তিনি লাভ করেন মধুসুন্দরী দেবীর বর। কিন্তু সেই সাধনাকেও সম্পূর্ণ বলা যায় না। অবশেষে থিতু হন তারানাথ। সংসার নিয়ে চলে আসেন কলকাতায়। একটা সময়ে ক্ষমতার অপব্যবহার ঘটিয়ে প্রচুর পয়সা করেছিলেন। কিন্তু তা জলের মতোই বেরিয়ে যায়। কায়ক্লেশে হস্তরেখা বিচার করে আর কোষ্ঠী বানিয়ে দিন যায় তার। তিনি চা এবং সিগারেট সহযোগে তার মট লেন হাউসে কয়েকজন বন্ধুদের সাথে আড্ডায় সেই অভিজ্ঞতাগুলি ভাগ করেছেন। গল্পে বলা হয়েছে লেখক তারনাথের ঘরে নিয়মিত পরিদর্শক। কখনও কখনও তার বন্ধুর সাথে, মাঝে মাঝে একা।
+
+      </center>
+        <center>
+        <div id="error"></div>
+        <form  name="myForm" onsubmit="validateForm()" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Your name">
+          </div>
+          <br>
+          <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Your email address">
+          </div>
+          <br>
+          <div><label>Give Your Rating:</label></div>
+          <div>
+          <ul class="list-inline rating-list">
+            <li><i class="fa fa-star" title="Rate 5"></i></li>
+            <li><i class="fa fa-star" title="Rate 4"></i></li>
+            <li><i class="fa fa-star" title="Rate 3"></i></li>
+            <li><i class="fa fa-star" title="Rate 2"></i></li>
+            <li><i class="fa fa-star" title="Rate 1"></i></li>
+          </ul>
+          </div>
+          <br>
+          <div><label>Remarks:</label></div>
+          
+
+          <textarea class="form-control" id="exampleInputPassword1" placeholder="Your message" name="" id="" cols="30" rows="10"></textarea>
+          <br>
+          <button class="btn" style="background-color: #FBD062; border: none; color: black;font-weight: 600 " type="submit">Send</button>
+        
+      </form>
+      </center>
+    </div>
+  </div>
+  <script>
+function validateForm() {
+    let x = document.forms["myForm"]["name"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+    x = document.forms["myForm"]["email"].value;
+    if (x == "") {
+        alert("email must be filled out");
+        return false;
+    }
+}
+  </script>
+</body>
+</html>

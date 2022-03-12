@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <style>
+.checked {
+  color: orange;
+}
+</style>
+  <style>
+    .wrapper{
+      display: flex;
+    }
+    .side{
+      flex: 1;
+      /* background-color: rgb(160, 194, 160); */
+      height: 600px;
+    }
+    .main{
+      flex: 4;
+      height: 600px;
+      background-color: rgb(217, 243, 243);
+      overflow: auto;
+    }
+    .pic{
+      height: 600px;
+      width: 450px;
+    }
+    /* star hover */
+    .rating-list li {
+      float: right;
+      color: rgb(12, 1, 1);
+      padding: 10px 5px;
+    }
+
+    .rating-list li:hover,
+    .rating-list li:hover ~ li {
+      color: red;
+    }
+
+    .rating-list {
+      display: inline-block;
+      list-style: none;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="side">
+      <img class="pic" src="./images/nf6.jpg">
+    </div>
+    <div class="main">
+      <center><h1 id="name">ব্যোমকেশ সমগ্র</h1></center>
+      <center><h2>BY</h2></center>
+      <center><h1 id="writer">শরদিন্দু বন্দ্যোপাধ্যায়</h1></center>
+      <center>
+      <p>ভূমিকাঃ</p>
+      <p>শরদিন্দু বন্দ্যোপাধ্যায়ের সৃষ্ট চরিত্র হিসেবে ব্যোমকেশ বক্সীর আবির্ভাব হয় সত্যান্বেষী গল্পে। ১৩৩১ বঙ্গাব্দে কলকাতার চীনাবাজার অঞ্চলে পরপর কয়েকটি খুনের ঘটনার কিনারা করতে 'বে-সরকারী ডিটেকটিভ' ব্যোমকেশ বক্সী পুলিশ কমিশনারের অনুমতি নিয়ে অতুলচন্দ্র মিত্র ছদ্মনামে এই অঞ্চলে এক মেসে বসবাস শুরু করেছিলেন। এই মেসে তার ঘরের অন্য ভাড়াটিয়া অজিত বন্দ্যোপাধ্যায়ের কলমে শরদিন্দু বন্দ্যোপাধ্যায় ব্যোমকেশের অধিকাংশ গোয়েন্দা গল্পগুলি লিখিয়েছিলেন। সত্যান্বেষী গল্পে ব্যোমকেশের বিবরণ দিতে গিয়ে অজিত বলেছেন, ...তাহার বয়স বোধকরি তেইশ-চব্বিশ হইবে, দেখিলে শিক্ষিত ভদ্রলোক বলিয়া মনে হয়। গায়ের রঙ ফরসা, বেশ সুশ্রী সুগঠিত চেহারা-মুখে চোখে বুদ্ধির একটা ছাপ আছে। এই গল্পের শেষে জানা যায়, হ্যারিসন রোডের একটি বাড়ীর তিনতলা ভাড়া নিয়ে ব্যোমকেশ বসবাস করেন। এই বাড়িতে ব্যোমকেশ ছাড়া দ্বিতীয় ব্যক্তি তার পরিচারক পুঁটিরাম। ব্যোমকেশের অনুরোধে অজিত এই বাড়ীতে বসবাস শুরু করেন। বাড়ীর দরজায় পেতলের ফলকে লেখা ছিল শ্রীব্যোমকেশ বক্সী, সত্যান্বেষী। সত্যান্বেষীর অর্থ জিজ্ঞাসা করায় অজিতকে ব্যোমকেশ বলেন, ওটা আমার পরিচয়। ডিটেকটিভ কথা শুনতে ভালো নয়, গোয়েন্দা শব্দটা আরও খারাপ, তাই নিজের খেতাব দিয়েছি সত্যান্বেষী।পরের গল্পগুলিতে ব্যোমকেশ নিজেকে সত্যান্বেষী বলেই পরিচয় দিয়েছেন। 
+
+      </center>
+        <center>
+        <div id="error"></div>
+        <form  name="myForm" onsubmit="validateForm()" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Your name">
+          </div>
+          <br>
+          <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Your email address">
+          </div>
+          <br>
+          <div><label>Give Your Rating:</label></div>
+          <div>
+          <ul class="list-inline rating-list">
+            <li><i class="fa fa-star" title="Rate 5"></i></li>
+            <li><i class="fa fa-star" title="Rate 4"></i></li>
+            <li><i class="fa fa-star" title="Rate 3"></i></li>
+            <li><i class="fa fa-star" title="Rate 2"></i></li>
+            <li><i class="fa fa-star" title="Rate 1"></i></li>
+          </ul>
+          </div>
+          <br>
+          <div><label>Remarks:</label></div>
+          
+
+          <textarea class="form-control" id="exampleInputPassword1" placeholder="Your message" name="" id="" cols="30" rows="10"></textarea>
+          <br>
+          <button class="btn" style="background-color: #FBD062; border: none; color: black;font-weight: 600 " type="submit">Send</button>
+        
+      </form>
+      </center>
+    </div>
+  </div>
+  <script>
+function validateForm() {
+    let x = document.forms["myForm"]["name"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+    x = document.forms["myForm"]["email"].value;
+    if (x == "") {
+        alert("email must be filled out");
+        return false;
+    }
+}
+  </script>
+</body>
+</html>

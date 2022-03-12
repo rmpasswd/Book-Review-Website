@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <style>
+.checked {
+  color: orange;
+}
+</style>
+  <style>
+    .wrapper{
+      display: flex;
+    }
+    .side{
+      flex: 1;
+      /* background-color: rgb(160, 194, 160); */
+      height: 600px;
+    }
+    .main{
+      flex: 4;
+      height: 600px;
+      background-color: rgb(217, 243, 243);
+      overflow: auto;
+    }
+    .pic{
+      height: 600px;
+      width: 450px;
+    }
+    /* star hover */
+    .rating-list li {
+      float: right;
+      color: rgb(12, 1, 1);
+      padding: 10px 5px;
+    }
+
+    .rating-list li:hover,
+    .rating-list li:hover ~ li {
+      color: red;
+    }
+
+    .rating-list {
+      display: inline-block;
+      list-style: none;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="side">
+      <img class="pic" src="./images/d.jpg">
+    </div>
+    <div class="main">
+      <center><h1 id="name">বাড়ি থেকে পালিয়ে</center>
+      <center><h2>BY</h2></center>
+      <center><h1 id="writer"> শিবরাম চক্রবর্তীর</h1></center>
+      <center>
+      <p>ভূমিকাঃ</p>
+      <p>কাঞ্চন নামে একটি আট বছরের ছেলে সারাক্ষণ তার গ্রামের বাড়িতে বদমায়েশি করে বেড়ায়। বাবা কাঞ্চনের মার উপর অত্যাচার চালান ও তাঁকে গৃহবন্দী করে রাখেন বলে সে তার বাবাকে এক নিষ্ঠুর দৈত্য মনে করে। তার স্বপ্নের মহানগরটি হল এল ডোরেডো (কলকাতা)। কিন্তু সেখানে পৌঁছে সে দেখতে পায় বাস্তব অনেক কঠিনতর এবং সেই নিষ্ঠুর বাস্তবতার যাঁরা শিকার হয়েছেন, তাঁদের সঙ্গে সাক্ষাৎ হওয়ার পর কলকাতা সম্পর্কে তার একটি অন্য ধারণা সৃষ্টি হয়। সে বেঁচে থাকার জন্য সংগ্রাম শুরু করে এবং বাস্তব জীবন সম্পর্কে কিছু অভিজ্ঞতা অর্জন করে। তার আলাপ হয় বহুরুপী হরিদাস যে বুলবুল ভাজা বেচে, ফুটপাতের জাদুকর, ছোট্ট মেয়ে মিনি ও তার পরিবারের সাথে, এছাড়া বাউল ভিখিরী ভবঘুরে চোর ব্যবসায়ী অসংখ্য পেশার মানুষের সঙ্গে পরিচিত হয়। কলকাতাকেকে চেনে এক আজব নগরী রূপে। আশা, আশা হারানোর বেদনা, দুখ সুখে মিলিয়ে সেখানকার মানুষ। শেষে সে তার গ্রামের বাড়িতে ফিরে যেতে চায়। সেই সময় সে এক পরিপক্ব মানুষে পরিণত হয়। সে বুঝতে পারে যে তার বাবা আদৌ দৈত্য নন। বরং তিনি দারিদ্রের শিকার এবং সেই দারিদ্রের সঙ্গেই সংগ্রামরত। তবু তিনি এক স্নেহময় পিতা।
+
+      </center>
+        <center>
+        <div id="error"></div>
+        <form  name="myForm" onsubmit="validateForm()" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Your name">
+          </div>
+          <br>
+          <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Your email address">
+          </div>
+          <br>
+          <div><label>Give Your Rating:</label></div>
+          <div>
+          <ul class="list-inline rating-list">
+            <li><i class="fa fa-star" title="Rate 5"></i></li>
+            <li><i class="fa fa-star" title="Rate 4"></i></li>
+            <li><i class="fa fa-star" title="Rate 3"></i></li>
+            <li><i class="fa fa-star" title="Rate 2"></i></li>
+            <li><i class="fa fa-star" title="Rate 1"></i></li>
+          </ul>
+          </div>
+          <br>
+          <div><label>Remarks:</label></div>
+          
+
+          <textarea class="form-control" id="exampleInputPassword1" placeholder="Your message" name="" id="" cols="30" rows="10"></textarea>
+          <br>
+          <button class="btn" style="background-color: #FBD062; border: none; color: black;font-weight: 600 " type="submit">Send</button>
+        
+      </form>
+      </center>
+    </div>
+  </div>
+  <script>
+function validateForm() {
+    let x = document.forms["myForm"]["name"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+    x = document.forms["myForm"]["email"].value;
+    if (x == "") {
+        alert("email must be filled out");
+        return false;
+    }
+}
+  </script>
+</body>
+</html>

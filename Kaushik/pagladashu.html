@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <style>
+.checked {
+  color: orange;
+}
+</style>
+  <style>
+    .wrapper{
+      display: flex;
+    }
+    .side{
+      flex: 1;
+      /* background-color: rgb(160, 194, 160); */
+      height: 600px;
+    }
+    .main{
+      flex: 4;
+      height: 600px;
+      background-color: rgb(217, 243, 243);
+      overflow: auto;
+    }
+    .pic{
+      height: 600px;
+      width: 450px;
+    }
+    /* star hover */
+    .rating-list li {
+      float: right;
+      color: rgb(12, 1, 1);
+      padding: 10px 5px;
+    }
+
+    .rating-list li:hover,
+    .rating-list li:hover ~ li {
+      color: red;
+    }
+
+    .rating-list {
+      display: inline-block;
+      list-style: none;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="side">
+      <img class="pic" src="./images/a.jpg">
+    </div>
+    <div class="main">
+      <center><h1 id="name">পাগলা দাশু</h1></center>
+      <center><h2>BY</h2></center>
+      <center><h1 id="writer">সুকুমার রায়</h1></center>
+      <center>
+      <p>ভূমিকাঃ</p>
+      <p>আমাদের স্কুলের যত ছাত্র তাহাদের মধ্যে এমন কেহই ছিল না, যে পাগলা দাশুকে না চিনে। যে লোক আর কাহাকেও জানে না, সেও সকলের আগে দাশুকে চিনিয়া ফেলে। সেবার এক নতুন দারোয়ান আসিল, একেবারে আন্‌‌কোরা পাড়াগেঁয়ে লোক, কিন্তু প্রথম যখন সে পাগলা দাশুর নাম শুনিল, তখনই আন্দাজে ঠিক করিয়া লইল যে, এই ব্যক্তিই পাগলা দাশু। কারণ মুখের চেহারায়, কথাবার্তায়, চাল-চলনে বোঝা যাইত যে তাহার মাথায় একটু 'ছিট' আছে। তাহার চোখ দুটি গোল গোল, কান দুটি অনাবশ্যক রকমের বড়, মাথায় একবস্তা ঝাঁকড়া চুল। চেহারাটা দেখিলেই মনে হয়—
+
+        ক্ষীণদেহ খর্বকায় মুণ্ডু তাহে ভারি
+        যশোরের কই যেন নরমূর্তিধারি।
+        সে যখন তাড়াতাড়ি চলে অথবা ব্যস্ত হইয়া কথা বলে, তখন তাহার হাত পা ছোঁড়ার ভঙ্গী দেখিয়া হঠাৎ কেন জানি চিংড়িমাছের কথা মনে পড়ে।
+        
+        সে যে বোকা ছিল তাহা নয়। অঙ্ক কষিবার সময়, বিশেষত লম্বা লম্বা গুণ-ভাগের বেলায় তাহার আশ্চর্য মাথা খুলিত। আবার এক এক সময় সে আমাদের বোকা বানাইয়া তামাশা দেখিবার জন্য এমন সকল ফন্দি বাহির করিত যে, আমরা তাহার বুদ্ধি দেখিয়া অবাক হইয়া থাকিতাম।
+
+      </center>
+        <center>
+        <div id="error"></div>
+        <form  name="myForm" onsubmit="validateForm()" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Your name">
+          </div>
+          <br>
+          <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Your email address">
+          </div>
+          <br>
+          <div><label>Give Your Rating:</label></div>
+          <div>
+          <ul class="list-inline rating-list">
+            <li><i class="fa fa-star" title="Rate 5"></i></li>
+            <li><i class="fa fa-star" title="Rate 4"></i></li>
+            <li><i class="fa fa-star" title="Rate 3"></i></li>
+            <li><i class="fa fa-star" title="Rate 2"></i></li>
+            <li><i class="fa fa-star" title="Rate 1"></i></li>
+          </ul>
+          </div>
+          <br>
+          <div><label>Remarks:</label></div>
+          
+
+          <textarea class="form-control" id="exampleInputPassword1" placeholder="Your message" name="" id="" cols="30" rows="10"></textarea>
+          <br>
+          <button class="btn" style="background-color: #FBD062; border: none; color: black;font-weight: 600 " type="submit">Send</button>
+        
+      </form>
+      </center>
+    </div>
+  </div>
+  <script>
+function validateForm() {
+    let x = document.forms["myForm"]["name"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+    x = document.forms["myForm"]["email"].value;
+    if (x == "") {
+        alert("email must be filled out");
+        return false;
+    }
+}
+  </script>
+</body>
+</html>
