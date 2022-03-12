@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <style>
+.checked {
+  color: orange;
+}
+</style>
+  <style>
+    .wrapper{
+      display: flex;
+    }
+    .side{
+      flex: 1;
+      /* background-color: rgb(160, 194, 160); */
+      height: 600px;
+    }
+    .main{
+      flex: 4;
+      height: 600px;
+      background-color: rgb(217, 243, 243);
+      overflow: auto;
+    }
+    .pic{
+      height: 600px;
+      width: 450px;
+    }
+    /* star hover */
+    .rating-list li {
+      float: right;
+      color: rgb(12, 1, 1);
+      padding: 10px 5px;
+    }
+
+    .rating-list li:hover,
+    .rating-list li:hover ~ li {
+      color: red;
+    }
+
+    .rating-list {
+      display: inline-block;
+      list-style: none;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="side">
+      <img class="pic" src="./images/nf3.jpg">
+    </div>
+    <div class="main">
+      <center><h1 id="name">যদ্যপি আমার গুরু</h1></center>
+      <center><h2>BY</h2></center>
+      <center><h1 id="writer">আহমদ ছফা </h1></center>
+      <center>
+      <p>ভূমিকাঃ</p>
+      <p>'১৮০০-১৮৫৮ সাল পর্যন্ত বাংলায় মধ্যবিত্ত শ্রেণীর উদ্ভব, বিকাশ এবং বাংলা সাহিত্য,সংস্কৃতি এবং রাজনীতিতে তার প্রভাব’ বিষয়ের উপর গবেষণার জন্য বন্ধুদের পরামর্শে রাষ্ট্রবিজ্ঞান বিভাগের অধ্যাপক আব্দুর রাজ্জাকের সাথে পরিচয় এবং তারপর ক্রমেই অন্তরঙ্গতা । অধ্যাপক আব্দুর রাজ্জাকের স্নেহ ছায়ায় ও দীর্ঘ সহচরে থেকে তিনি তার সম্পর্কে বলেছেন - দৃষ্টিভঙ্গির স্বচ্ছতা নির্মাণে, নিষ্কাম জ্ঞান চর্চার ক্ষেত্রে প্রচলিত জনমত উপেক্ষা করে নিজের বিশ্বাসের প্রতি স্থিত থাকার ব্যাপারে প্রফেসর আব্দুর রাজ্জাকের মত আমাকে অন্য কোনো জীবিত বা মৃত মানুষ অতো প্রভাবিত করতে পারেনি। 'মনীষা কান্তি' বলে একটা কথা আছে যার মানে বুদ্ধির প্রেমে পড়া। ছফার মতে তিনি রাজ্জাক সাহেবের তীক্ষ্ণ ধীশক্তির প্রেমে পড়েছিলেন। নিত্য তার কাছে ছুটতেন ছফা, জ্ঞানের টানে। সমাজ, রাজনীতি, ধর্ম, সাহিত্য, বিজ্ঞান এবং সমকালীন ঘটনা প্রবাহ সবকিছু নিয়েই দুজনের মাঝে হতো বিস্তর আলোচনা, তা থেকে ঠিকরে পড়তো প্রজ্ঞার আলো।
+
+        <br>যদ্যপি আমার গুরুতে শিষ্যের কলমে উঠে এসেছে গুরুর ব্যক্তিগত জীবন, তার দৃষ্টিতে তার সময়ের অন্যান্য কিংবদন্তীদের সম্পর্কে নানা তথ্য এবং পারিপার্শ্বিক পরিস্থিতি নিয়ে নিঁখুত পর্যবেক্ষণ।[২] রাজ্জাকের বাচনভঙ্গির একটা বিশেষত্ব ছিল, তিনি ঢাকার আঞ্চলিক ভাষায় কথা বলতেন। পোশাক পরিচ্ছেদের ক্ষেত্রেও তিনি ছিলেন অনাড়ম্বর। বিয়ে করে সংসারী হওয়া হয়নি তার। তবে খাবার দাবারের ব্যাপারে তাকে বেশ শৌখিন হিসেবেই দেখিয়েছেন ছফা। দেশী - বিদেশী সব ধরনের খাবার নিয়ে তার আগ্রহ ছিল। সমসাময়িক ব্যক্তি এবং পরিস্থিতি নিয়ে তার নিজস্ব একটা মত ছিল। সেটা প্রকাশে তিনি অকপট ছিলেন। তার মাঝে পরোপকার করার এবং ভালো কাজে পৃষ্ঠপোষকতা দানের প্রবণতা ছিল।
+        </center>
+        <center>
+        <div id="error"></div>
+        <form  name="myForm" onsubmit="validateForm()" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Your name">
+          </div>
+          <br>
+          <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Your email address">
+          </div>
+          <br>
+          <div><label>Give Your Rating:</label></div>
+          <div>
+          <ul class="list-inline rating-list">
+            <li><i class="fa fa-star" title="Rate 5"></i></li>
+            <li><i class="fa fa-star" title="Rate 4"></i></li>
+            <li><i class="fa fa-star" title="Rate 3"></i></li>
+            <li><i class="fa fa-star" title="Rate 2"></i></li>
+            <li><i class="fa fa-star" title="Rate 1"></i></li>
+          </ul>
+          </div>
+          <br>
+          <div><label>Remarks:</label></div>
+          
+
+          <textarea class="form-control" id="exampleInputPassword1" placeholder="Your message" name="" id="" cols="30" rows="10"></textarea>
+          <br>
+          <button class="btn" style="background-color: #FBD062; border: none; color: black;font-weight: 600 " type="submit">Send</button>
+        
+      </form>
+      </center>
+    </div>
+  </div>
+  <script>
+function validateForm() {
+    let x = document.forms["myForm"]["name"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+    x = document.forms["myForm"]["email"].value;
+    if (x == "") {
+        alert("email must be filled out");
+        return false;
+    }
+}
+  </script>
+</body>
+</html>
