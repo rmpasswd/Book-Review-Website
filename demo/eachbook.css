@@ -1,0 +1,14 @@
+.wrapper{
+  display: flex;
+}
+.side{
+  flex: 1;
+  /* background-color: rgb(160, 194, 160); */
+  height: 600px;
+}
+.main{
+  flex: 2;
+  height: 600px;
+  /* background-color: rgb(217, 243, 243); */
+  overflow: auto;
+}
