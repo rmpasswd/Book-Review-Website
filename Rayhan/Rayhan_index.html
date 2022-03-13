@@ -69,18 +69,18 @@
       </center>
         <center>
         <div id="error"></div>
-        <form  name="myForm" onsubmit="validateForm()" method="post">
+        <form  name="myForm" onsubmit="validateForm()" action = "review.php" method="POST" traget = "reviewframe">
           <div class="form-group">
-            <input type="text" class="form-control" id="name" placeholder="Your name">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Your name">
           </div>
           <br>
           <div class="form-group">
-              <input type="email" class="form-control" id="email" placeholder="Your email address">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Your email address">
           </div>
           <br>
           <div><label>Give Your Rating:</label></div>
           <div>
-          <ul class="list-inline rating-list">
+          <ul name = "rating" class="list-inline rating-list">
             <li><i class="fa fa-star" title="Rate 5"></i></li>
             <li><i class="fa fa-star" title="Rate 4"></i></li>
             <li><i class="fa fa-star" title="Rate 3"></i></li>
@@ -89,14 +89,17 @@
           </ul>
           </div>
           <br>
-          <div><label>Remark:</label></div>
+          <div><label>Write a review?:</label></div>
           
 
-          <textarea class="form-control" id="exampleInputPassword1" placeholder="Your message" name="" id="" cols="30" rows="10"></textarea>
+          <textarea name="review" class="form-control" id="exampleInputPassword1" placeholder="Your message" name="" id="" cols="30" rows="10"></textarea>
           <br>
           <button class="btn" style="background-color: #FBD062; border: none; color: black;font-weight: 600 " type="submit">Send</button>
-        
+
       </form>
+
+      <iframe width="1080px" name= "reviewframe"  style= "border:none"></iframe>
+
       </center>
     </div>
   </div>
@@ -112,6 +115,7 @@ function validateForm() {
         alert("email must be filled out");
         return false;
     }
+
 }
   </script>
 </body>

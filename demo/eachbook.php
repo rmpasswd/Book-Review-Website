@@ -70,16 +70,22 @@
       <?php
 
               $reviews = mysqli_query($connec, "SELECT review FROM `bookreview` where `bookname` LIKE '$book_name';") or die("Query failed, try again later". mysqli_error($connec));
-              extract(mysqli_fetch_assoc($reviews)); 
-              
               $reviewuser = mysqli_query($connec, "SELECT Name FROM `bookreview` where `bookname` LIKE '$book_name';") or die("Query failed, try again later". mysqli_error($connec));
-              extract(mysqli_fetch_assoc($reviewuser)); 
-
               $rating = mysqli_query($connec, "SELECT star FROM `bookreview` where `bookname` LIKE '$book_name';") or die("Query failed, try again later". mysqli_error($connec));
-              extract(mysqli_fetch_assoc($rating)); 
+              
 
-              echo "<p>$Name Rating: $star</p>";
+              if (mysqli_fetch_assoc($rating) != null){
+
+                extract(mysqli_fetch_assoc($reviewuser)); 
+              echo "<p>$Name</p>";
+                
+                extract(mysqli_fetch_assoc($rating)); 
+              echo "<p>Rating: $star</p>";
+
+                extract(mysqli_fetch_assoc($reviews));               
               echo "<p>$review</p>";
+              
+              }
 
 
       ?>

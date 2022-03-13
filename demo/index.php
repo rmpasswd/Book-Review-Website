@@ -23,7 +23,7 @@
               <li><a href="#fiction">Fiction</a></li>
               <li><a href="#nonFiction">Non-fiction</a></li>
               <li><a href="#children">Children</a></li>
-              <li><a href="contact.html">Contact US</a></li>
+              <li><a href="#contact">Contact US</a></li>
               
           </ul>
           <div class="media-icons">
@@ -96,7 +96,7 @@
                 <div class="col-4">
                     <div>
                         <!-- <a href="fictionReview1.html"> -->
-                        <a href="./eachbook.php?bookname=1984">
+                        <a href="./eachbook.php?bookname=1984" target='_blank'>
                             <img  style="height: 500px; width:350px; border-radius: 5px;" src="Images/3.jpg" alt="">
                         </a>
                     </div>
@@ -104,7 +104,7 @@
                 
                 <div class="col-4">
                         <div>
-                        <a href="./eachbook.php?bookname=The Cruel Prince">
+                        <a href="./eachbook.php?bookname=The Cruel Prince" target='_blank'>
                         <img style="height: 500px; width:350px; border-radius: 5px;" src="./Images/5.jpg" alt="">
                         </a>
                     </div>
@@ -112,7 +112,7 @@
                 
                 <div class="col-4">
                         <div>
-                        <a href="./eachbook.php?bookname=The Mother">
+                        <a href="./eachbook.php?bookname=The Mother"   target='_blank'>
                         <img style="height: 500px; width:350px; border-radius: 5px;" src="./Images/6.jpg" alt="">
                     </a>
                     </div>
@@ -122,7 +122,7 @@
                 
                 <div class="col-4">
                     <div>
-                        <a href="./eachbook.php?bookname=গুপী গাইন ও বাঘা বাইন">   
+                        <a href="./eachbook.php?bookname=গুপী গাইন ও বাঘা বাইন" target='_blank'>   
                             <img style="height: 500px; width:350px; border-radius: 5px;" src="./Images/10.jpg" alt="">
                         </a>
                     </div>
@@ -130,7 +130,7 @@
                 
                 <div class="col-4">
                         <div>
-                        <a href="./eachbook.php?bookname=সংশপ্তক">
+                        <a href="./eachbook.php?bookname=সংশপ্তক" target='_blank'>
                         <img style="height: 500px; width:350px; border-radius: 5px;" src="./Images/8.jpg" alt="">
                         </a>
                     </div>
@@ -151,7 +151,7 @@
                 
                 <div class="col-4">
                         <div>
-                        <a href="./eachbook.php?bookname=The Hill We Climb: An Inaugural Poem for the Country">
+                        <a href="./eachbook.php?bookname=The Hill We Climb: An Inaugural Poem for the Country" target='_blank'>
                         <img style="height: 500px; width:350px; border-radius: 5px;" src="./Images/1.jpg" alt="">
                         </a>    
                     </div>
@@ -159,7 +159,7 @@
                 
                 <div class="col-4">
                         <div>
-                        <a href="./eachbook.php?bookname=Dream Work">   
+                        <a href="./eachbook.php?bookname=Dream Work" target='_blank'>   
                         <img style="height: 500px; width:350px; border-radius: 5px;" src="./Images/2.jpg" alt="">
                         </a>
                     </div>
@@ -167,7 +167,7 @@
                 
                 <div class="col-4">
                         <div>
-                        <a href="./eachbook.php?bookname=জালালুদ্দিন রুমির কবিতা">   
+                        <a href="./eachbook.php?bookname=জালালুদ্দিন রুমির কবিতা" target='_blank'>   
                         <img style="height: 500px; width:350px; border-radius: 5px;" src="./Images/4.jpg" alt="">
                         </a>
                     </div>
@@ -177,7 +177,7 @@
                 
                 <div class="col-4">
                         <div>
-                        <a href="./eachbook.php?bookname=ক্রাচের কর্নেল">   
+                        <a href="./eachbook.php?bookname=ক্রাচের কর্নেল" target='_blank'>   
                         <img style="height: 500px; width:350px; border-radius: 5px;" src="./Images/7.jpg" alt="">
                         </a>
                     </div>
@@ -185,7 +185,7 @@
                 
                 <div class="col-4">
                         <div>
-                        <a href="./eachbook.php?bookname=সেই সময়">   
+                        <a href="./eachbook.php?bookname=সেই সময়" target='_blank'>   
                         <img style="height: 500px; width:350px; border-radius: 5px;" src="./Images/9.jpg" alt="">
                         </a>
                     </div>
@@ -247,7 +247,7 @@
   <br>
   <br>
   
-  <div class="container mt-5">
+  <div id = "contact" class="container mt-5">
       <h1>Contact <span style="color: rgb(251, 208, 98);"> Us</span> </h1>
     <form>
         <div class="form-group">
